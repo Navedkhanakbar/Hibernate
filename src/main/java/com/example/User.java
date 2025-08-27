@@ -18,6 +18,9 @@ public class User {
     @Column(nullable = false,unique = true)
     private String email;
 
+    @Embedded
+    private Address address;
+
 
     @Transient
      private int age;
@@ -65,6 +68,10 @@ public class User {
 
     @Override
     public String toString() {
-        return id+" - "+name+" - "+email;
+        return id + " - " + name + " - " + email +
+                " | Address: " + address.getStreet() + ", " +
+                address.getCity() + ", " +
+                address.getState() + " - " +
+                address.getZipcode();
     }
 }
