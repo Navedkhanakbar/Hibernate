@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         // created the table
-        create(new User("Naved","nk9167755768@gmail.com"));
-        create(new User("Al-fiya","alfi900@gmail.com"));
+        create(new User("Naved","nk9167755768@gmail.com",(new Address("molana azad road","thane","maharashtra","400612"))));
+        create(new User("Al-fiya","alfi9001@gmail.com",(new Address("kabrastan road","thane","maharashtra","400612"))));
 
         //read
         User user = Read(1);
