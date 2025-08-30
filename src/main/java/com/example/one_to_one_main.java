@@ -11,9 +11,9 @@ public class one_to_one_main {
         Transaction tx = ses.beginTransaction();
 
 
-        profile pro = new profile("loves naved");
+        profile pro = new profile("loves naved and al-fiya");
 
-        users us = new users("Al-fiya", pro);
+        users us = new users("al-vida", pro);
 
         ses.persist(us);
 

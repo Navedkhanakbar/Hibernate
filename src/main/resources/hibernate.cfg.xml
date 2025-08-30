@@ -18,5 +18,7 @@
         <mapping class="com.example.User"/>
         <mapping class="com.example.users"/>
         <mapping class="com.example.profile"/>
+        <mapping class="com.example.Department"/>
+        <mapping class="com.example.Employee"/>
     </session-factory>
 </hibernate-configuration>
