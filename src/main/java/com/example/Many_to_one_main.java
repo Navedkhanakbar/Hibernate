@@ -53,6 +53,7 @@ public class Many_to_one_main {
         }
         finally {
             session.close();
+            sessionfactory.close();
 
         }
 
