@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.NativeQuery;
 
 import javax.management.Query;
 import java.util.List;
@@ -43,6 +44,26 @@ public class F_t_HQL {
             for(Worker w: highsalary) {
                 System.out.println(w);
             }
+
+
+            NativeQuery<Worker> Nquery = session.createNativeQuery("select * from akaslave", Worker.class);
+
+            List<Worker> NqLIST = Nquery.getResultList();
+
+
+            NativeQuery<Worker> paraNquery = session.createNativeQuery("select * FROM akaslave where Salary >= :sal", Worker.class);
+
+            paraNquery.setParameter("sal",2000);
+
+
+            List<Worker> highpaying = paraNquery.getResultList();
+
+
+            for(Worker l: highpaying) {
+                System.out.println(l);
+            }
+
+
         }
         finally {
             session.close();
