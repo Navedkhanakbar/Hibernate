@@ -25,5 +25,6 @@
         <mapping class="com.example.Student"/>
         <mapping class="com.example.Course"/>
         <mapping class="com.example.Worker"/>
+        <mapping class="com.example.family"/>
     </session-factory>
 </hibernate-configuration>
